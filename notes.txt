@@ -1,0 +1,60 @@
+HEADER:
+- menu items: =======================> OK 
+    - grid?
+    - "View all job by..."
+- input search: the text color of placeholder is not right =======================> OK (set opacity = 1 for ::placeholder)
+
+COMPANY OVERVIEW (1/ bottom of job overview, 2/ top of company profile, 3/ right side of job page):
+- reuse? =======================> OK 
+
+CHARACTERISTICITEM:
+- get icons from official website?
+
+JOBLIST:
+- scroll behavior to bottom =======================> OK (set height to fit the screen)
+- 1st click to jobItem (affected by a callback which is setState (useState) in useEffect): component re-render 2 times?
+
+JOBITEM:
+- job-title: margin-bottom does not work =======================> OK (set display block/flex)
+- using reload when switching among jobs
+
+PAGINATION:
+- optimize logic?
+
+GLOBALSTORE:
+- structure for multiple state?
+- jobList vs recommendedJobList
+- use memo to avoid components re-render when state changes: does not work with headerShrink
+- state: currentCity vs searchLocation; userInputText vs searchText; setSearchJobList(jobList) in MenuSubItem
+
+FILTERJOBS:
+- optimize logic?
+- setSearchText in Search components
+
+APIS:
+- call apis one or many times? reset data when switching among pages
+- url structure, how to remove multiple special characters from a string
+- job api
+- redirect to 404 page when url is not correct/ private pages for user only
+- fetch api for userList will overwrite old data and it will not be persisted with Redux persist
+
+REDUX:
+- blacklist, whitelist: how to apply for children of an obj 
+- usersSlice- updateUser: only update data for currentUser does not update the state in store
+- jobList title display on loading
+
+COMMON: 
+- data structure's rules?
+- check the existence before processing data (data is undefined before calling apis causes error: "Cannot read properties of undefined ")
+- components' separation is reasonable?
+- tippyjs: hideOnClick does not work
+- how to reuse a function (ex: handleSearchJobs)?
+- window.location.reload(false)
+- transition for elements have display none (Modal)
+- apply useCallback for funcs have params
+
+
+Authentication: https://www.youtube.com/watch?v=6sLh_5iFnFc
+BUGS:
+- 2nd click on btn of skill in JobItem, JobOverview
+- joblist result display when accessing the page: Home, All jobs

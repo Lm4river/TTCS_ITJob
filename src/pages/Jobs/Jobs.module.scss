@@ -1,0 +1,35 @@
+.wrapper {
+  background-color: var(--lighter-grey);
+  padding-bottom: 20px;
+}
+
+.container {
+  padding-bottom: 10px;
+}
+
+// responsive
+@media screen and (max-width: 992px) {
+  .wrapper {
+    padding-bottom: 10px;
+  }
+
+  .search-form {
+    margin-top: 58px;
+    background-color: var(--dark);
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    flex: 1;
+    padding: 20px 0;
+  }
+
+  .head-search {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    padding-bottom: 0;
+  }
+}

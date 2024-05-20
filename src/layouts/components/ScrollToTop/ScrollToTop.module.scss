@@ -1,0 +1,39 @@
+.wrapper {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  color: var(--grey);
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+  opacity: 0;
+
+  position: fixed;
+  z-index: 20;
+  right: 50px;
+  bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: clip-path 0.1s, opacity 1s ease;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--grey);
+  }
+
+  &.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    bottom: 20px;
+    right: 20px;
+  }
+}

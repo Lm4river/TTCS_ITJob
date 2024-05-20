@@ -1,0 +1,33 @@
+.wrapper {
+  width: var(--default-width);
+  margin: 5px auto 0;
+  font-size: 1.3rem;
+
+  .path-item {
+    color: var(--medium-grey);
+    cursor: pointer;
+
+    & + .path-item {
+      margin-left: 5px;
+
+      &::before {
+        content: '>';
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+// responsive
+@media screen and (max-width: 992px) {
+  .wrapper {
+    padding-left: 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    display: none;
+  }
+}

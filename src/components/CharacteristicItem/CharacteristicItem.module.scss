@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.4rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 14px;
+  width: 14px;
+  margin-right: 10px;
+  flex-shrink: 0;
+
+  img {
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+span {
+  color: var(--dark);
+}

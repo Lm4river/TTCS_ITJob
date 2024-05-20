@@ -1,0 +1,29 @@
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 10px;
+  user-select: none;
+
+  &.pointer {
+    cursor: pointer;
+  }
+}
+
+.content {
+  width: 100%;
+  padding: 8px;
+  color: var(--text-overlay-header);
+  font-size: 1.8rem;
+  font-weight: 540;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.multilevel:hover {
+  // background-color: var(--light-dark);
+}

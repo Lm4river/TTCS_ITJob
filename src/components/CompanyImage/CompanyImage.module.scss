@@ -1,0 +1,13 @@
+.wrapper {
+  padding: 3px;
+  width: 65px;
+  height: 65px;
+  border: 1px solid var(--grey);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  overflow: hidden;
+  object-fit: content;
+  flex-shrink: 0;
+}

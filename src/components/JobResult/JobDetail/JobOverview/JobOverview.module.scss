@@ -1,0 +1,38 @@
+.wrapper {
+  padding: 15px 0 15px 1px;
+  border-bottom: 1px solid #e9e9e9;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  color: var(--dark-grey);
+}
+
+.salary {
+  color: var(--green);
+}
+
+.address,
+.type,
+.date-posted {
+  display: flex;
+  align-items: center;
+}
+
+.newPost {
+  color: var(--blue);
+}
+
+.map-link {
+  position: relative;
+  top: -2px;
+  margin-left: 12px;
+
+  color: gray;
+  font-size: 1.3rem;
+  line-height: 1.09;
+  border-bottom: 1px dashed;
+
+  &:hover {
+    color: var(--blue);
+  }
+}

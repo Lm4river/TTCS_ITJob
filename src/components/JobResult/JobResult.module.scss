@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+  width: var(--default-width);
+  max-width: 100%;
+  margin: 30px auto 0;
+}
+
+.detail {
+  flex: 1;
+}
+
+.job {
+  padding: 0 30px;
+  width: 100%;
+}
+
+.company {
+  padding: 15px;
+  width: 100%;
+}
+
+.detail-mobile {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+// responsive
+@media screen and (max-width: 992px) {
+  .wrapper {
+    margin-top: 20px;
+  }
+
+  .detail {
+    display: none;
+  }
+
+  .detail-mobile.active {
+    display: block;
+    padding: 10px;
+    opacity: 1;
+  }
+
+  .close-btn {
+    position: fixed;
+    z-index: 15;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--grey);
+  }
+
+  .container {
+    position: fixed;
+    z-index: 11;
+    top: 15%;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 0 20px 20px;
+    background-color: var(--white);
+    overflow: scroll;
+    border-radius: 5px;
+
+    .job-header {
+      top: 0;
+      padding-top: 30px;
+    }
+  }
+
+  .overlay {
+    background-color: var(--dark);
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    margin-top: 10px;
+  }
+}

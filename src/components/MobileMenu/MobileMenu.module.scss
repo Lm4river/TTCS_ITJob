@@ -1,0 +1,98 @@
+.wrapper {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s, opacity 0.3s;
+
+  &.active {
+    display: block;
+    transform: scaleX(1);
+
+    .container {
+      transform: scaleX(1);
+    }
+
+    .overlay {
+      opacity: 0.75;
+    }
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100vh;
+  background-color: var(--light-dark);
+  overflow-y: auto;
+
+  z-index: 11;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.3s ease;
+
+  &.light {
+    background-color: var(--white);
+
+    .close-btn {
+      color: var(--grey);
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 13px;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+// overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark);
+  opacity: 0;
+  transition: all 1s ease;
+  z-index: 10;
+}
+
+// mobile menu item
+.menu-item {
+  padding-left: 32px;
+  height: 50px;
+  color: var(--white);
+  font-size: 1.6rem;
+  border-bottom: solid 1px #222021;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-icon {
+  margin-right: 15px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-icon {
+  position: absolute;
+  right: 20px;
+}

@@ -1,0 +1,21 @@
+.wrapper {
+  padding-top: 200px;
+  text-align: center;
+  height: 600px;
+
+  h1 {
+    color: var(--primary);
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+// responsive
+@media screen and (max-width: 450px) {
+  .wrapper {
+    height: 450px;
+  }
+}

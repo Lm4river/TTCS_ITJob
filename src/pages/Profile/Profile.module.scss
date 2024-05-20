@@ -1,0 +1,300 @@
+.wrapper {
+  background-color: var(--lighter-grey);
+  padding: 90px 0 30px;
+  height: auto;
+}
+
+.container {
+  width: var(--default-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+// profile-info
+.profile-info {
+  background-color: var(--white);
+  padding: 15px 25px 25px;
+  border: 1px solid #d8d8d8;
+}
+
+.profile-header {
+  border-bottom: 1px solid #d8d8d8;
+  display: flex;
+
+  span {
+    width: 160px;
+    padding: 10px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    text-align: center;
+    color: var(--dark-grey);
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #d3d3d3;
+    }
+
+    &.active {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+  }
+}
+
+.profile-title {
+  margin: 12px 0 5px;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.profile-subtitle {
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.upload-cv,
+.create-profile {
+  display: flex;
+  flex: 1;
+  border: 1px solid #dee2e6;
+  padding: 50px;
+  min-height: 258px;
+
+  &:hover {
+    box-shadow: 0 0 5px 1px #bcbcbc;
+  }
+
+  h4 {
+    margin-top: 5px;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 1.3rem;
+  }
+}
+
+.upload-cv {
+  input {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+
+    i {
+      font-size: 10rem;
+      line-height: 10rem;
+      color: var(--primary);
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+}
+
+.create-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+
+  h4 {
+    margin-top: 7px;
+  }
+
+  i {
+    font-size: 10rem;
+    line-height: 10rem;
+    color: var(--primary);
+  }
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.profile-title {
+  font-size: 2rem;
+}
+
+.toggle-btn {
+  color: var(--blue);
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+// edit account
+.profile-fullname {
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.profile-collapse {
+  height: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: all 0.2s ease-in-out;
+
+  &.show {
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    padding: 6px 0 6px 12px;
+    font-size: 1.4rem;
+    margin-top: 8px;
+
+    &:focus {
+      border-color: var(--blue);
+    }
+  }
+}
+
+.form-group {
+  margin: 10px 0;
+
+  label {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  input {
+    display: flex;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+
+    &:focus {
+      border-color: var(--blue);
+    }
+  }
+}
+
+.edit-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+
+  button {
+    width: 100px;
+    height: 40px;
+    font-size: 1.6rem;
+
+    &:first-child {
+      color: var(--dark-grey);
+      border-color: var(--dark-grey);
+
+      &:hover {
+        color: var(--primary);
+        background-color: var(--white);
+        border-color: var(--primary);
+      }
+    }
+  }
+}
+
+.profile-policy_text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+
+  a {
+    color: var(--blue);
+  }
+}
+
+.profile-policy_toggle-btn {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+
+  span {
+    margin-right: 10px;
+  }
+}
+
+.success-img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+// recommended jobs
+.recommended-jobs {
+  background-color: var(--white);
+  padding: 15px 25px 25px;
+  border: 1px solid #d8d8d8;
+
+  h3 {
+    margin: 15px 0;
+    font-size: 1.9rem;
+    font-weight: normal;
+  }
+}
+
+// responsive
+@media screen and (max-width: 992px) {
+  .wrapper {
+    padding-top: 75px;
+    padding-bottom: 20px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .upload-cv,
+  .create-profile {
+    padding: 30px;
+  }
+
+  .recommended-jobs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    padding-top: 65px;
+    padding-bottom: 10px;
+  }
+  .profile-actions {
+    flex-direction: column;
+  }
+
+  .upload-cv,
+  .create-profile {
+    padding: 15px;
+  }
+}

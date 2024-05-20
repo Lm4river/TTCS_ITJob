@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3a9910a5.css",
+    "main.js": "/static/js/main.f1ad9ccf.js",
+    "static/js/787.67f10c59.chunk.js": "/static/js/787.67f10c59.chunk.js",
+    "static/media/image04.webp": "/static/media/image04.b0c9e94866859a66cb7f.webp",
+    "static/media/image05.webp": "/static/media/image05.48c6011735e5e4e1d783.webp",
+    "static/media/image03.webp": "/static/media/image03.105501c8901acf9319c1.webp",
+    "static/media/image02.webp": "/static/media/image02.08f106fee7f5e89badaf.webp",
+    "static/media/image01.webp": "/static/media/image01.842faed3ee0efc18f3b3.webp",
+    "static/media/google.png": "/static/media/google.4ff9a5f6e189dba3d48e.png",
+    "static/media/COM_08.webp": "/static/media/COM_08.d3f51aed349db1621f10.webp",
+    "static/media/no_image.jpg": "/static/media/no_image.3f37e96d8d04d1e67452.jpg",
+    "static/media/none_jobs_applied.png": "/static/media/none_jobs_applied.77d0623b0887946118ff.png",
+    "static/media/COM_01.webp": "/static/media/COM_01.4065ab20b7623354053b.webp",
+    "static/media/COM_06.webp": "/static/media/COM_06.89e13ae471f88c35e7c9.webp",
+    "static/media/COM_04.webp": "/static/media/COM_04.96524a96b53f8c8199ae.webp",
+    "static/media/COM_03.webp": "/static/media/COM_03.ebdb198f913c660cc1c2.webp",
+    "static/media/COM_10.webp": "/static/media/COM_10.f60fd8c9c4c38921b425.webp",
+    "static/media/COM_09.webp": "/static/media/COM_09.5f111af4c0317e08e43c.webp",
+    "static/media/COM_05.webp": "/static/media/COM_05.c979588ca2457f3ff982.webp",
+    "static/media/COM_07.webp": "/static/media/COM_07.3f312eafe35d33f79967.webp",
+    "static/media/COM_02.webp": "/static/media/COM_02.f4a438f405bf904d810c.webp",
+    "index.html": "/index.html",
+    "main.3a9910a5.css.map": "/static/css/main.3a9910a5.css.map",
+    "main.f1ad9ccf.js.map": "/static/js/main.f1ad9ccf.js.map",
+    "787.67f10c59.chunk.js.map": "/static/js/787.67f10c59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a9910a5.css",
+    "static/js/main.f1ad9ccf.js"
+  ]
+}

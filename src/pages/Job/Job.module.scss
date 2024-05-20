@@ -1,0 +1,179 @@
+.wrapper {
+  background-color: var(--lighter-grey);
+  padding-bottom: 20px;
+}
+
+.container {
+  width: var(--default-width);
+  padding-top: var(--header-height);
+  padding-bottom: 20px;
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+// company images if available
+.company-photo {
+  max-width: 100%;
+  height: 290px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+// job content & company overview
+.job-info {
+  grid-column: 1 / span 2;
+  background-color: var(--white);
+  padding: 0 80px 20px;
+}
+
+// company overview
+.company-info {
+  background-color: var(--white);
+  padding: 20px;
+  position: sticky;
+  top: var(--header-height);
+
+  &.shrink {
+    top: var(--header-height-onsroll-down);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 170px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: var(--dark);
+  font-size: 2.4rem;
+  font-weight: 550;
+}
+
+.sub-title {
+  width: 100%;
+  color: var(--dark-grey);
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.characteristics {
+  flex: 2;
+  color: var(--dark-grey);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 5px;
+}
+
+.view-profile {
+  display: flex;
+  justify-content: center;
+  padding: 15px 20px 8px;
+}
+
+// more jobs
+.more-jobs {
+  grid-column: 1 / span 2;
+  background-color: var(--white);
+  grid-column: 1 / span 2;
+  padding: 30px 80px;
+}
+
+.more-jobs_title {
+  font-size: 2.3rem;
+  font-weight: bold                 ;
+  margin-bottom: 16px;
+}
+
+.subscribe-btn {
+  margin-bottom: 16px;
+
+  i {
+    margin-right: 10px;
+  }
+}
+
+// responsive 
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  }
+
+  .company-photo {
+    display: none;
+  }
+
+  .job-info {
+    padding: 0 40px 20px;
+  }
+
+  .company-info_container {
+    background-color: var(--white);
+    padding: 40px;
+  }
+
+  .company-info {
+    background-color: var(--lighter-grey);
+
+    .sub-title {
+      text-align: center;
+    }
+  }
+
+  .more-jobs {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .joblist {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper,
+  .container {
+    padding-bottom: 0;
+  }
+
+  .company-info_container {
+    padding: 20px;
+  }
+
+  .job-info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .more-jobs {
+    display: none;
+  }
+}
