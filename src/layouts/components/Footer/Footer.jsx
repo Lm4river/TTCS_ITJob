@@ -137,7 +137,7 @@ function Footer() {
         <div className={cx('info')}>
           <h4 className={cx('title')}>Liên hệ để đăng tin tuyển dụng tại:</h4>
           <span className={cx('item')}>
-            Ho Chi Minh: (+84) 123 456 789 - Ha Noi: (+84) 123 456 789 - Email: nxq@gmail.com
+            Ho Chi Minh: (+84) 123 456 789 - Ha Noi: (+84) 123 456 789 - Email: khactrung@gmail.com
           </span>
         </div>
       </div>
