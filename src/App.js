@@ -20,8 +20,7 @@ function App() {
     dispatch(jobsSliceActions.fetchJobs());
     dispatch(companiesSliceActions.fetchCompanies());
     dispatch(companiesSliceActions.fetchTopCompanies());
-    userList.length === 0 && dispatch(usersSliceActions.fetchUsers()); // only fetUsers for the very first time as it will overwrite the list if perform fetUsers from 2nd time
-    // dispatch(usersSliceActions.fetchUsers());
+    userList.length === 0 && dispatch(usersSliceActions.fetchUsers()); 
   }, []);
 
   useEffect(() => {

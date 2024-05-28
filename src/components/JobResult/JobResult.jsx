@@ -12,9 +12,9 @@ import JobOverview from './JobDetail/JobOverview';
 import JobContent from './JobDetail/JobContent';
 import { useReduxSelector } from '~/redux/selectors';
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles);// classNames và styles từ CSS Modules
 
-function JobResult({ jobList }) {
+function JobResult({ jobList }) {//ác props nhận được từ parent là jobList
   const { selectedJob, selectedCompany } = useReduxSelector();
   const [activeOverlay, setActiveOverlay] = useState(false);
 

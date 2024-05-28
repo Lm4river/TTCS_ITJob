@@ -31,11 +31,11 @@ function JobOverview({ job = {} }) {
     // reset searchTextError
     dispatch(filtersSlice.actions.searchTextErrorChange(false));
 
-    // set value for searchText & location
+    // set giá trị searchText & location
     dispatch(filtersSlice.actions.searchFilterChange(skill));
     dispatch(filtersSlice.actions.locationFilterChange('Tất cả thành phố'));
 
-    // navigate to job page and reset filters
+    // điều hướng tới  job page , reset filters
     navigate(config.routes.jobs);
   }, []);
 

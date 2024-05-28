@@ -22,7 +22,7 @@ function JobHeader({ className, job = {}, company = {} }) {
   const navigate = useNavigate();
   const { currentUser, headerShrink } = useReduxSelector();
   const [activeOverlay, setActiveOverlay] = useState(false);
-
+//kiểm tra công việc đã lưu
   const handleToggleSaveJob = () => {
     if (currentUser) {
       let savedJobList = currentUser.savedJobs || [];
@@ -43,7 +43,7 @@ function JobHeader({ className, job = {}, company = {} }) {
       navigate(config.routes.signIn);
     }
   };
-
+//ứng tuyển công việc 
   const handleApplyJob = useCallback(() => {
     if (currentUser) {
       let appliedJobList = currentUser.appliedJobs || [];
@@ -55,7 +55,7 @@ function JobHeader({ className, job = {}, company = {} }) {
           key: 'appliedJobs',
           payload: appliedJobList,
         }),
-      );
+      );//gửi hành động cập nhật người dùng với ds công việc đã ứng tuyển 
 
       setActiveOverlay(true);
     } else {
@@ -64,7 +64,7 @@ function JobHeader({ className, job = {}, company = {} }) {
   }, [job]);
 
   const handleSetActiveOverlay = useCallback(setActiveOverlay, []);
-
+//render component
   if (job && company) {
     return (
       <header className={cx('wrapper', className, { shrink: headerShrink })}>
@@ -88,7 +88,7 @@ function JobHeader({ className, job = {}, company = {} }) {
             )}
           </button>
         </div>
-
+{/* hiển thị khi ứng tuyển thành công */}
         <Modal
           title="Bạn đã ứng tuyển thành công!"
           active={activeOverlay}

@@ -76,12 +76,12 @@ function JobItem({ data = {}, selectJob = () => {} }) {
                 ? `${data.salaryMin.toLocaleString('en-US')} - ${data.salaryMax.toLocaleString('en-US')} USD`//Hiển thị thông tin về mức lương của công việc
                 : data.salaryMin && typeof data.salaryMin === 'string'
                 ? data.salaryMin
-                : `Up to ${data.salaryMax.toLocaleString('en-US')} USD`}//không có salarymin thì upto
+                : `Up to ${data.salaryMax.toLocaleString('en-US')} USD`}
             </CharacteristicItem>
 
-            {data.highlightBenefits && (
+            {data.highlightBenefits && (//kt lợi ích
               <ul className={cx('benefits')}>
-                {data.highlightBenefits.map((benefit, index) => (
+                {data.highlightBenefits.map((benefit, index) => (//hiển thị các lợi ích 
                   <li key={index} className={cx('benefit-item')}>
                     {benefit}
                   </li>
@@ -95,14 +95,14 @@ function JobItem({ data = {}, selectJob = () => {} }) {
                   className={cx({ active: selectedJob.id === data.id })}
                   key={index}
                   basic
-                  onClick={() => handleSearchJobs(skill)}
+                  onClick={() => handleSearchJobs(skill)}//duyệt mảng data.skil ,tạp ds nút kĩ năng
                 >
                   {skill}
                 </Button>
               ))}
             </div>
           </div>
-
+{/* cập nhật hot , new */}
           <div className={cx('hight-light')}>
             {data.hotJob ? <span className={cx('hot-tag')}>Hot</span> : ''}
             {!data.seen ? <span className={cx('new-tag')}>New</span> : ''}

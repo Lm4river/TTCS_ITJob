@@ -18,3 +18,4 @@ PopperWrapper.propTypes = {
 };
 
 export default memo(PopperWrapper);
+//bọc nội dung và điều chỉnh kiểu dáng và hành vi của nó dựa trên các props được cung cấp

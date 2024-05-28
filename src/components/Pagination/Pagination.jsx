@@ -7,11 +7,7 @@ import styles from './Pagination.module.scss';
 const cx = classNames.bind(styles);
 
 function Pagination({ className, jobsPerPage = 10, showNavigateButtons = 5, totalJob, currentPage, paginate }) {
-  // jobsPerPage: user to set, default value is 10
-  // showNavigateButtons: user to set, default value is 5
-  // totalJob: jobList.length
-  // currentPage: page number of current post, using useState hook
-  // paginate: function to set current page when click on page number
+
 
   const lastPage = Math.ceil(totalJob / jobsPerPage);
 

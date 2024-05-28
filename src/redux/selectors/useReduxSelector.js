@@ -88,3 +88,4 @@ const useReduxSelector = () => {
 };
 
 export default useReduxSelector;
+//ể giúp truy cập vào các phần khác nhau của trạng thái (state) trong Redux một cách dễ dàng

@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import Flag from 'react-world-flags';
+import Flag from 'react-world-flags';//hiển thị cờ
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { faCalendarDays, faClock, faFlag } from '@fortawesome/free-regular-svg-icons';

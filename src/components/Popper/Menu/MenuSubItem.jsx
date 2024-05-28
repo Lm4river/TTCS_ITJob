@@ -21,7 +21,7 @@ function MenuSubItem({ children, className, search, searchBy }) {
       // reset searchTextError
       dispatch(filtersSlice.actions.searchTextErrorChange(false));
 
-      // filter jobs by search values
+      // filter jobs bằng giá trị tìm kiếm
       switch (searchBy) {
         case 'company':
           dispatch(filtersSlice.actions.searchFilterChange(''));
@@ -37,7 +37,7 @@ function MenuSubItem({ children, className, search, searchBy }) {
           break;
       }
 
-      // navigate to companyProfile/ job page and reset filters
+      // điều hướng companyProfile/ job page và reset filters
       if (searchBy === 'company') {
         navigate(
           config.routes.companyProfile.replace(
@@ -74,3 +74,4 @@ MenuSubItem.propTypes = {
 };
 
 export default memo(MenuSubItem);
+//tạo ra các mục con trong menu,tìm kiếm và điều hướng 

@@ -29,14 +29,14 @@ function JobList({ jobList: passedJobList }) {
   const [currentPage, setCurrentPage] = useState(1);
   const jobListRef = useRef();
 
-  // pagination settings
+  // phân trang
   const showNavigateButtons = config.pagination.showNavigateButtons;
   const jobsPerPage = config.pagination.jobsPerPage;
   const totalJob = passedJobList.length;
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
 
-  // set current list of jobs to render
+  // set ds hiện tại jobs để  render
   const currentJobList =
     passedJobList.length === 0 && searchTextError
       ? recommendedJobList.slice(0, 5)
@@ -44,7 +44,7 @@ function JobList({ jobList: passedJobList }) {
       ? []
       : passedJobList.slice(indexOfFirstJob, indexOfLastJob);
 
-  // set title for job list
+  // set title cho job list
   let title = '';
   if (window.location.pathname === config.routes.home) {
     title = `${passedJobList.length} Việc làm được đề xuất cho ${currentUser.fullname}`;
@@ -76,7 +76,7 @@ function JobList({ jobList: passedJobList }) {
     dispatch(filtersSlice.actions.searchTextErrorChange(false));
     dispatch(jobsSlice.actions.selectJob(currentJobList[0]));
   }, []);
-
+// Logic xử lý khi có thay đổi trong searchText, location hoặc passedJobList
   useEffect(() => {
     if (passedJobList.length > 0) {
       dispatch(filtersSlice.actions.searchTextErrorChange(false));
@@ -85,7 +85,7 @@ function JobList({ jobList: passedJobList }) {
     }
   }, [searchText, location, passedJobList]);
 
-  // reset selected job when changing current page
+  // reset selected job khi thay đổi page hiện tại
   useEffect(() => {
     if (window.screen.availWidth < 993) {
       dispatch(jobsSlice.actions.selectJob({}));
@@ -94,7 +94,7 @@ function JobList({ jobList: passedJobList }) {
     }
   }, [currentPage]);
 
-  // reset currentpage, selected job, set scroll to top when changing filtered job list
+  // reset currentpage, selected job, set scroll lên đầu khi thay đổi danh sách lọc
   useEffect(() => {
     setCurrentPage(1);
 
@@ -111,17 +111,17 @@ function JobList({ jobList: passedJobList }) {
     document.documentElement.scrollTop = 0;
   }, [passedJobList]);
 
-  const handleSelectJob = (job) => {
+  const handleSelectJob = (job) => {// Xử lý khi người dùng chọn một công việc.
     dispatch(jobsSlice.actions.selectJob(job));
   };
-
+// Xử lý khi người dùng thay đổi trang
   const handlePaginate = useCallback((pageNumber) => {
     setCurrentPage(pageNumber);
     jobListRef.current.scrollTo(0, 0);
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }, []);
-
+ // Render giao diện của component
   return (
     <aside className={cx('wrapper', { shrink: headerShrink })} ref={jobListRef}>
       <h1 className={cx('title')}>{title}</h1>

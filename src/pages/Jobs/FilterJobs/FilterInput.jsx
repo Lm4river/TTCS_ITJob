@@ -9,7 +9,7 @@ import { FILTER_TITLES } from '~/assess/constants';
 const cx = classNames.bind(styles);
 
 function FilterInput({ children, title, items = [], leftCharacter, rightCharacter, state, setState }) {
-  // update filter states when checking/unchecking filter items
+  //update filter state
   const handleFilterCheck = (e) => {
     let isChecked = e.target.checked;
 
@@ -34,7 +34,7 @@ function FilterInput({ children, title, items = [], leftCharacter, rightCharacte
     }
   };
 
-  // reset checkbox on submit/clear all
+  // reset checkbox nộp và clear
   const handleResetCheckbox = (item) => {
     return state.includes(item);
   };

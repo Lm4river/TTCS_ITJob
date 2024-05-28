@@ -23,3 +23,4 @@ ToggleSwitch.propTypes = {
 };
 
 export default memo(ToggleSwitch);
+// tạo ra một công tắc 

@@ -18,7 +18,7 @@ function MainLayout({ children }) {
 }
 
 MainLayout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,//React node và là bắt buộc.
 };
 
 export default memo(MainLayout);

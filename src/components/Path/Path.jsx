@@ -22,3 +22,4 @@ Path.propTypes = {
 };
 
 export default memo(Path);
+//hiển thị một đường dẫn trên giao diện người dùng để người dùng có thể biết vị trí

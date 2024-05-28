@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 
 function Menu({ children, className, items = [], search }) {
   const [subMenu, setSubMenu] = useState(items[0]);
-
+//hook useState để lưu trữ mục menu phụ hiện đang được chọn
   const handleMenuHover = useCallback((item) => {
     setSubMenu(item);
   }, []);
@@ -58,12 +58,7 @@ function Menu({ children, className, items = [], search }) {
                   );
                 })}
 
-                {/* not yet develop view all page */}
-                {/* {subMenu.viewAll && (
-                  <MenuSubItem className={cx('view-all')}>
-                    <Link to={subMenu.link}>{`View all Jobs by ${subMenu.viewAll}`}</Link>
-                  </MenuSubItem>
-                )} */}
+              
               </div>
             )}
           </PopperWrapper>
@@ -86,3 +81,4 @@ Menu.propTypes = {
 };
 
 export default memo(Menu);
+//di chuột qua một mục menu chính, component sẽ hiển thị các mục menu phụ tương ứng với mục chính đó

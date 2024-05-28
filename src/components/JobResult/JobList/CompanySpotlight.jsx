@@ -13,16 +13,16 @@ import config from '~/config';
 const cx = classNames.bind(styles);
 
 function CompanySpotlight({ className, topCompanyList = [], jobList = [] }) {
-  // get 1 top company randomly in company top list
+  // lấy một cty bất kì trong danh sách
   const randomIndex = Math.floor(Math.random() * topCompanyList.length);
   const topCompany = topCompanyList[randomIndex];
 
-  // job list of top company selected
+  // danh sách công việc 
   let topCompanyJobList;
   if (!!topCompany) {
     topCompanyJobList = jobList.filter((job) => job.companyId === topCompany.id);
   }
-
+  // Nếu không có công ty được chọn, component không trả về gì cả và không hiển thị gì trên giao diện
   if (topCompany) {
     return (
       <div className={cx('company-spotlight', className)}>
