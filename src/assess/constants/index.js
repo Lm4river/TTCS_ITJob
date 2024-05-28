@@ -129,7 +129,7 @@ const HEADER_MOBILE_MENU = [
   { title: 'Blog', to: config.routes.blog },
 ];
 
-// filtered jobs
+// lọc job
 const FILTER_TITLES = {
   level: 'Cấp bậc',
   salary: 'Mức lương',

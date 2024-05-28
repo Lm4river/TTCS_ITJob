@@ -1,6 +1,6 @@
 import { useCallback, memo } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';//điều hướng chương trình
+import { useDispatch } from 'react-redux';//gửi các action đến Redux store
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +20,7 @@ function JobItem({ data = {}, selectJob = () => {} }) {
   const dispatch = useDispatch();
   const { selectedJob, companyList } = useReduxSelector();
   const navigate = useNavigate();
-
+//tính ngày , giờ , phút của bài đăng
   const jobPostedDay = Math.floor(data.postedTime / 1000 / 60 / 60 / 24);
   const jobPostedHour = Math.floor((data.postedTime / 1000 / 60 / 60) % 24);
   const jobPostedMinute = Math.ceil((data.postedTime / 1000 / 60) % 60);
@@ -30,20 +30,20 @@ function JobItem({ data = {}, selectJob = () => {} }) {
     // reset searchTextError
     dispatch(filtersSlice.actions.searchTextErrorChange(false));
 
-    // set value for searchText & location
+    // set giá trị searchText & location
     dispatch(filtersSlice.actions.searchFilterChange(skill));
     dispatch(filtersSlice.actions.locationFilterChange('Tất cả thành phố'));
 
-    // navigate to job page
+    // điều hướng tới trang việc làm với đường dẫn được cấu hình trong config
     dispatch(filtersSlice.actions.resetFilters());
     navigate(config.routes.jobs);
-  }, []);
+  }, []);//dependency array của useCallback,handleSearchJobs sẽ được ghi nhớ và không thay đổi giữa các lần render trừ khi có sự thay đổi trong các dependencies
 
   if (data && selectedJob) {
     return (
       <div
         className={cx('wrapper', { special: !!data.highlightBenefits, selected: selectedJob.id === data.id })}
-        onClick={() => selectJob(data)}
+        onClick={() => selectJob(data)}//thêm class với điều kiện
       >
         <CompanyImage
           className={cx('logo-image')}
@@ -52,7 +52,7 @@ function JobItem({ data = {}, selectJob = () => {} }) {
             companyList.length > 0 &&
               companyList
                 .find((company) => company.id === data.companyId)
-                .name.replace(/[^a-zA-Z1-10000]/g, '-')
+                .name.replace(/[^a-zA-Z1-10000]/g, '-')//hay thế các ký tự không phải chữ cái và số trong tên công ty bằng dấu gạch ngang và chuyển thành chữ thường
                 .toLowerCase() + data.companyId.replace('_', '-').toLowerCase(),
           )}
           src={data.logo}
@@ -73,10 +73,10 @@ function JobItem({ data = {}, selectJob = () => {} }) {
 
             <CharacteristicItem className={cx('salary')} icon={<FontAwesomeIcon icon={faDollarSign} />}>
               {data.salaryMin && typeof data.salaryMin === 'number'
-                ? `${data.salaryMin.toLocaleString('en-US')} - ${data.salaryMax.toLocaleString('en-US')} USD`
+                ? `${data.salaryMin.toLocaleString('en-US')} - ${data.salaryMax.toLocaleString('en-US')} USD`//Hiển thị thông tin về mức lương của công việc
                 : data.salaryMin && typeof data.salaryMin === 'string'
                 ? data.salaryMin
-                : `Up to ${data.salaryMax.toLocaleString('en-US')} USD`}
+                : `Up to ${data.salaryMax.toLocaleString('en-US')} USD`}//không có salarymin thì upto
             </CharacteristicItem>
 
             {data.highlightBenefits && (

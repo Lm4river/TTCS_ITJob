@@ -22,3 +22,4 @@ CharacteristicItem.propTypes = {
 };
 
 export default memo(CharacteristicItem);
+// hiển thị một mục có biểu tượng và nội dung con

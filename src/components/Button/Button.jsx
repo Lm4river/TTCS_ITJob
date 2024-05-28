@@ -8,8 +8,6 @@ import styles from './Button.module.scss';
 const cx = classNames.bind(styles);
 
 function Button({ children, className, to, href, basic, primary, outline, md, lg, xl, onClick = () => {}, ...props }) {
-  // button type (choose only one, default is basic): basic/ primary/ outlined
-  // button size (choose only one, default is small): md/ lg/ xl
 
   let Wrap = 'button';
 
@@ -47,3 +45,4 @@ Button.propTypes = {
 };
 
 export default memo(Button);
+//functional component nhận vào các props để tạo ra các loại button
